@@ -40,11 +40,11 @@ while (begin)
 
         case 3:
 
-            Console.WriteLine("Введите начальное число M:");
+            Console.Write("Введите начальное число M:");
             int numberA = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            Console.WriteLine("Введите начальное число N:");
+            Console.Write("Введите начальное число N:");
             int numberB = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
