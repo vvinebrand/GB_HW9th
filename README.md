@@ -1,1 +1,1 @@
-# Работа находтся в папке <span style="color: red">GB_HW9th</span>
+# Работа находтся в папке GB_HW9th
