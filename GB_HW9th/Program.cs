@@ -40,6 +40,15 @@ while (begin)
 
         case 3:
 
+            Console.WriteLine("Введите начальное число M:");
+            int numberA = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine("Введите начальное число N:");
+            int numberB = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine($"Функция Аккермана для чисел A({numberA},{numberB}) = {AckermannFunction(numberA, numberB)}");
 
             break;
         default:
@@ -66,4 +75,12 @@ void GapNumberSum(int numberM, int numberN, int sum)
     }
     sum = sum + (numberM++);
     GapNumberSum(numberM, numberN, sum);
+}
+
+int AckermannFunction(int numberA, int numberB)
+{
+    if (numberA == 0) return numberB + 1;
+    if (numberA != 0 && numberB == 0) return AckermannFunction(numberA - 1, 1);
+    if (numberA > 0 && numberB > 0) return AckermannFunction(numberA - 1, AckermannFunction(numberA, numberB - 1));
+    return AckermannFunction(numberA, numberB);
 }
